@@ -16,7 +16,7 @@ JOBS=[
   },
 {
     'id':3,
-  'title': 'devop',
+  'title': 'devop bgg',
   'salary':'Rs.2000000'
   }
 ]
