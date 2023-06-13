@@ -1,0 +1,20 @@
+<h4>APPLICATION FORM</h4>
+<form action="/job/{{job['id']}}/apply" method=post>
+  <div class=mb-2><label>FULL NAME</label><br>
+  <input type='text' name='full name' placeholder='bruce wayne'></div>
+  <div class=mb-2><label>EMAIL</label><br>
+  <input type='text' name='email' placeholder='bruce@wayne.com'></div>
+  <div class=mb-2><label>LINKEDIN</label><br>
+  <input type='text' name='linkedin' placeholder='https://www.linkedin.com/in/brucewayne/'></div>
+  <div class=mb-2><label>RESUME LINK</label><br>
+  <input type='text' name='resume' placeholder='https://www.RESUME.com/in/brucewayne/'></div>
+  <div class=mb-2>
+    <label>EDUCATION</label><br>
+    <textarea name=education></textarea>
+  </div>
+  <div class=mb-2>
+  <label>WORK EXPERIENCE</label><br>
+    <textarea name=experience></textarea>
+  </div>
+  <input class=mb-2 type=submit >
+</form>
