@@ -2,13 +2,21 @@
 <html>
   <head>
     <title>ee careers</title>
-    { % include 'bootstrap.html' %}
+    <meta charset="utf-8">
+    {%include 'bootstrap.html'%}
     <style>
       #custom-element {
   color: tint-color($primary, 10%);
   background-color: $dark;
 }
-      <style>
+     
+    
+  </head>
+  <body>
+    
+    {% include 'nav.html' %}
+    <div > 
+     <style>
 
       #banner{
         height:  320px;
@@ -18,13 +26,6 @@
       margin-bottom: 16px;}
 
     </style>
-    
-  </head>
-  <body>
-    
-    {% include 'nav.html' %}
-    <div > 
-    <
     <div class="container">
       <img class="img-fluid" id="banner" src="https://vikash-web-1.subashun-vikash.repl.co/static/banner.jpg" >
     <h1 class="text-center mt-2 mb-4">EE careers</h1>
