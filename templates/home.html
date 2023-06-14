@@ -24,28 +24,28 @@
   <body>
     
     {% include 'nav.html' %}
-    <div > 
-    <
+    <div class="p-3 mb-2 bg-dark text-white"> 
+    
     <div class="container">
       <img class="img-fluid" id="banner" src="https://vikash-web-1.subashun-vikash.repl.co/static/banner.jpg" >
-    <h1 class="text-center mt-2 mb-4">EE careers</h1>
+    <h1 class="text-center mt-2 mb-4" style="color: white;">EE careers</h1>
     
       <div class='row' style="margin-bottom:16px">
-        <h2 class="text-center mt-2 mb-4">About EE</h2>
+        <h2 class="text-center mt-2 mb-4" style="color: white;">About EE</h2>
       <div class="col-md-6">
     
-    <p class="lead">Welcome to our job openings website, where we strive to connect job seekers with their dream career opportunities. Our platform offers a wide range of job listings from various industries, including technology, healthcare, finance, education, and more. We work with reputable companies and employers who are seeking top talent to join their teams. Whether you're just starting out in your career or looking to make a change, we have opportunities for individuals with varying levels of experience and skill sets. Our user-friendly interface and personalized job alerts make it easy for you to find and apply for your desired job. </p></div>
+    <p class="lead" style="color: white;">Welcome to our job openings website, where we strive to connect job seekers with their dream career opportunities. Our platform offers a wide range of job listings from various industries, including technology, healthcare, finance, education, and more. We work with reputable companies and employers who are seeking top talent to join their teams. Whether you're just starting out in your career or looking to make a change, we have opportunities for individuals with varying levels of experience and skill sets. Our user-friendly interface and personalized job alerts make it easy for you to find and apply for your desired job. </p></div>
         <div class='d-md-block col-6 mb-4'><img src='/static/img2.jpg.jpg' style='height:300px; border-radius:4px;'>
         </div>
 
       </div>
       
-    <h2 class="text-center mt-2 mb-4">OPEN POSITIONS</h2>
+    <h2 class="text-center mt-2 mb-4" style="color: white;">OPEN POSITIONS</h2>
     <p >{% for job in jobs %}
       {% include 'jobs.html' %}
     {% endfor %}</p>
     <div class="text-center"> 
-    <button class="btn btn-primary btn-lg">CONTACT US</button>
+    <button class="btn btn-outline-light">CONTACT US</button>
     </div>
     </div>
     </div>

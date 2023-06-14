@@ -1,21 +1,27 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
   <head>
     <title>APPLICATION SUBMITTED</title>
     {%include'bootstrap.html'%}
     
   </head>
-  <body>
+ <style>
+  .gold-text {
+   color: yellow;
+    
+  }
+</style>
+  <body class="p-3 mb-2 bg-dark text-white">
     {%include 'nav.html'%}
-    <div class=container>{%include'banner.html'%}
-      <p>your application for "{{job['title']}}" is submitted</p>
-    <div><h1>APPLICATION INFO</h1></div>
-    <div><h4>full name:{{application['full name']}}</h4></div>
+    <div class=container class="p-3 mb-2 bg-info text-dark">{%include'banner.html'%}
+      <p>YOUR APPLICATION FOR "{{job['title']}}" IS SUBMITTED</p>
+    <div ><h1>APPLICATION INFO</h1></div>
+    <div class="mb-2"><h4 class="gold-text">FULL NAME:</h4> <P>{{application['full name']}}</P></div>
 
-    <div><h4>linkedln url:{{application['linkedin']}}</h4></div>
-    <div><h4>education:{{application['education']}}</h4></div>
-    <div><h4>work experience:{{application['experience']}}</h4></div>
-    <div><h4>resume url:{{application['resume']}}</h4></div>
+    <div class="mb-2"><h4 class="gold-text">LINKEDIN URL:</h4><p>{{application['linkedin']}}</p></div>
+    <div class=mb-2 ><h4 class="gold-text">EDUCATION:</h4><p>{{application['education']}}</p></div>
+    <div class=mb-2><h4 class="gold-text">WORK EXPERIENCE:</h4><p>{{application['experience']}}</p></div>
+    <div class=mb-2><h4 class="gold-text">RESUME URL:</h4><p>{{application['resume']}}</p></div>
     </div>
     {%include'footer.html'%}
     
