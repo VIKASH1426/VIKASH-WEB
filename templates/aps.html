@@ -1,0 +1,85 @@
+<div class="cards">
+  {%include'bootstrap.html'%}
+    <div class="card red">
+        <p class="tip">{{application['fullname']}}</p>
+        <p class="tip">{{application['linkedin']}}</p>
+    </div>
+    <div class="card blue">
+        <p class="tip">{{application['education']}}</p>
+        <p class="tip">{{application['resumeurl']}}</p>
+    </div>
+    <div class="card blue1">
+        <p class="tip">experience:</p>
+        <p class="tip">{{application['experience']}}</p></div>
+  <div class="card blue">
+        <p class="tip">{{application['education']}}</p>
+        <p class="tip">{{application['resumeurl']}}</p>
+    </div>
+      
+    </div>
+</div>
+
+
+
+
+<style>.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+  .cards .orange {
+  background-color: #FFA500;
+}
+
+.cards .white {
+  background-color: #f8f8f8;
+  color: black;
+}
+
+.cards .blue1 {
+  background-color: #3b22c5;
+}
+
+.cards .red {
+  background-color: #f43f5e;
+}
+
+.cards .blue {
+  background-color: #3b82f6;
+}
+
+.cards .green {
+  background-color: #22c55e;
+}
+
+.cards .card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  height: 100px;
+  width: 250px;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+  transition: 400ms;
+}
+
+.cards .card p.tip {
+  font-size: 1em;
+  font-weight: 700;
+}
+
+.cards .card p.second-text {
+  font-size: .7em;
+}
+
+.cards .card:hover {
+  transform: scale(1.1, 1.1);
+}
+
+.cards:hover > .card:not(:hover) {
+  filter: blur(10px);
+  transform: scale(0.9, 0.9);
+}</style>
