@@ -1,7 +1,7 @@
 from flask import Flask,render_template,jsonify,request
 from database import load_jobs_from_db
 from database import load_job_from_db
-from database import add_application_to_db
+from database import add_application_to_db,add_admin_to_db
 
 
 
@@ -21,6 +21,13 @@ def hello_world():
 @app.route("/api/jobs")
 def list_jobs():
   return jsonify(job)
+@app.route("/admin/jobs")
+def showadmin():
+  return render_template('admin.html')
+@app.route("/adminentry/jobs")
+def add():
+  data1=request.form
+  add_admin_to_db(data1)
 @app.route("/job/<id>")
 def show_job(id):
   job = load_job_from_db(id)

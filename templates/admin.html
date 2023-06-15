@@ -1,26 +1,37 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
+<head>
+  <title>Password Verification</title>
+  <style>
+    .hidden {
+      display: none;
+    }
+  </style>
+  <script>
+    function checkPassword() {
+      var password = document.getElementById("password").value;
+      var correctPassword = "myPassword123"; // Replace with your desired password
+
+      if (password === correctPassword) {
+        document.getElementById("passwordSection").classList.add("hidden");
+        document.getElementById("contentSection").classList.remove("hidden");
+      } else {
+        alert("Incorrect password. Please try again.");
+      }
+    }
+  </script>
+</head>
 <body>
-      <center>
-         <input type="password" placeholder="passcode" id="tutorial">
-         <button onclick="protectpasscode()">CHECK</button>
-         <script>
-            function protectpasscode() {
-               const result = document.getElementById("tutorial").value;
-               let passcode = 12345;
-               let space = '';
-               if (result == space) {
-                  alert("Type passcode")
-               } else {
-                  if (result == passcode) {
-                    {%include 'admin main.html'%}
-                  } else {
-                     alert("Incorrect Passcode");
-                     location.reload();
-                  }
-               }
-            }
-         </script>
-      </center>
-   </body>
+  
+  <section id="passwordSection">
+    <h1>Password Verification</h1>
+    <label for="password">Enter the password:</label>
+    <input type="password" id="password" name="password">
+    <button onclick="checkPassword()">Submit</button>
+  </section>
+  <section id="contentSection" class="hidden">
+    <!-- Your content goes here -->
+    {%include'sqladmin.html'%}
+   </section>
+</body>
 </html>

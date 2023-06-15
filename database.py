@@ -42,6 +42,20 @@ def add_application_to_db(job_id, data):
         
         conn.execute(query, row)
         conn.commit()
-  
+def add_admin_to_db(job_id, data):
+    row = {
+        
+        "title": data["title"],
+        "loacation": data["location"],
+        "salary": data["salary"],
+        "requirement": data["requirement"],
+        
+    }
+    with engine.connect() as conn:
+        query = text(
+            "INSERT INTO jobs (title,location,salary,requirement) VALUES (:title,:location,:salary,:requirement)")
+        
+        conn.execute(query, row)
+        conn.commit()  
   
   
