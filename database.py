@@ -3,6 +3,8 @@ import sqlalchemy
 print(sqlalchemy.__version__)
 from sqlalchemy import create_engine
 from sqlalchemy import text
+from sqlalchemy import Table, Column, Integer, String, MetaData, ForeignKey
+from sqlalchemy import inspect
 import os
 connection_string = os.environ['db_connection_string']
 engine = create_engine(connection_string,echo=True)
@@ -24,7 +26,10 @@ def load_job_from_db(id):
       return None
     else:
       return dict(rows[0])
- 
+#def add_application_to_db(job_id,data):
+  #with engine.connect() as conn:
+    #sql=text("INSERT INTO application(id,job_id,fullname,email,linkedin,education,experience,resumeurl) VALUES (:job_id,:fullname,:email,:linkedin,:education,:experience,:resumeurl)")
+    #conn.execute(job_id=job_id,fullname=data['fullname'],email=data['email'],linkedin=data['linkedin'],education=data['education'],experience=data['experience'],resumeurl=data['resumeurl'])
   
   
   
