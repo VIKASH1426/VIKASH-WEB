@@ -1,19 +1,27 @@
 <div class="cards">
   {%include'bootstrap.html'%}
     <div class="card red">
+        <p class="tip">FULLNAME</p>
         <p class="tip">{{application['fullname']}}</p>
+    </div>
+  <div class="card blue">
+        <p class="tip">email</p>
+        <p class="tip">{{application['email']}}</p>
+    </div>
+    <div class="card white">
+        <p class="tip">LINKEDIN</p>
         <p class="tip">{{application['linkedin']}}</p>
     </div>
-    <div class="card blue">
-        <p class="tip">{{application['education']}}</p>
-        <p class="tip">{{application['resumeurl']}}</p>
-    </div>
-    <div class="card blue1">
+    <div class="card orange">
         <p class="tip">experience:</p>
         <p class="tip">{{application['experience']}}</p></div>
-  <div class="card blue">
-        <p class="tip">{{application['education']}}</p>
+  <div class="card green">
+        <p class="tip">RESUMEURL</p>
         <p class="tip">{{application['resumeurl']}}</p>
+    </div>
+  <div class="card blue1">
+        <p class="tip">EDUCATION</p>
+        <p class="tip">{{application['education']}}</p>
     </div>
       
     </div>
@@ -32,7 +40,7 @@
 }
 
 .cards .white {
-  background-color: #f8f8f8;
+  background-color: #000000;
   color: black;
 }
 
