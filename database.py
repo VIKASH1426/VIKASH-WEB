@@ -42,7 +42,7 @@ def add_application_to_db(job_id, data):
         
         conn.execute(query, row)
         conn.commit()
-def add_admin_to_db(job_id, data):
+def add_admin_to_db(data):
     row = {
         
         "title": data["title"],
